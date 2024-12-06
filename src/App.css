@@ -82,16 +82,80 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .App-header {
-    padding: 1rem;
+    padding: 0.5rem;
   }
-  
+
   .App-header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #282c34;
+    flex-direction: column;
+    padding: 1rem;
     gap: 1rem;
   }
-  
+
+  .App-header nav.active {
+    display: flex;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
   .App-header h1 {
     font-size: 1.2rem;
   }
+
+  .welcome-section {
+    padding: 2rem 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header h1 {
+    font-size: 1rem;
+  }
+
+  .App-logo {
+    height: 30px;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-text {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Mobile Navigation */
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
 }
 
 .welcome-section {
